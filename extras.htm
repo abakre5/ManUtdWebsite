@@ -1,0 +1,194 @@
+<h1 style="color:white;background:#DA020E;padding:5px;text-align:center">Arena</h1>
+
+<style>
+ figure { 
+  position: relative;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 10%;
+  width: 501px; 
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 200%;
+  text-transform: capitalize;
+  }
+  span {
+    color: red;
+    background: rgba(0, 0, 0, 0.7);
+    padding: .5em;
+}
+.modal {
+
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  background: rgba(0,0,0, 0.7);
+  transition: opacity .25s ease;
+}
+
+.modal__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.modal-state {
+  display: none;
+}
+
+.modal-state:checked + .modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-state:checked + .modal .modal__inner {
+  top: 0;
+}
+
+.modal__inner {
+  transition: top .25s ease;
+  position: absolute;
+  top: -20%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  margin: auto;
+  overflow: auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 1em 2em;
+  height: 50%;
+}
+
+.modal__close {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 1.1em;
+  height: 1.1em;
+  cursor: pointer;
+}
+
+.modal__close:after,
+.modal__close:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 1.5em;
+  background: #ccc;
+  display: block;
+  transform: rotate(45deg);
+  left: 50%;
+  margin: -3px 0 0 -1px;
+  top: 0;
+}
+
+.modal__close:hover:after,
+.modal__close:hover:before {
+  background: #aaa;
+}
+
+.modal__close:before {
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+	
+  .modal__inner {
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+  }
+}
+
+p img {
+  max-width: 200px;
+  height: auto;
+  float: left;
+  margin: 0 1em 1em 0;
+}
+</style>
+
+
+<figure>
+  <img class="grayscale" src="old.jpg" height="100%" width="100%"/>
+  <figcaption>
+    <span><label  for="modal-1">BookMyGame</label><br/>
+     <label  for="modal-1">&nbsp;&nbsp;Arena</label><br/>
+<label  for="modal-3">&nbsp;&nbsp;Capacity</label>
+     <br/>
+    <label  for="modal-4"> &nbsp;&nbsp;Museum&Tour</label>
+    </span>
+  </figcaption>
+</figure>
+
+<center>
+<input class="modal-state" id="modal-1" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-1"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-1"></label>
+    <h2>Old Traford : The Theatre of Dreams</h2>
+    <p>Old Trafford is a football stadium in Old Trafford, Greater Manchester, England, and the home of Manchester United. With a capacity of 75,635, it is the third-largest stadium and the second-largest football stadium in the United Kingdom, and the eleventh-largest in Europe. It is about 0.5 miles (800 m) from Old Trafford Cricket Ground and the adjacent tram station.</p>
+  </div>
+</div></center>	
+
+<center>
+<input class="modal-state" id="modal-4" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-4"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-4"></label>
+    <h2>Old Traford : Museum & Tour</h2>
+    <img src="mus&tour.ashx"/>
+  </div>
+</div></center>	
+
+<center>
+<input class="modal-state" id="modal-3" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-3"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-3"></label>
+    <h2>Old Traford : Capcity</h2>
+    <p>Capcity : 75,635</p>
+  </div>
+</div></center>	
+
+<h1 style="color:white;background:#DA020E;padding:5px;text-align:center">FanZone</h1>
+<figure>
+  <img class="grayscale" src="manutdfan.jpg" height="100%" width="100%"/>
+  <figcaption>
+    <span><label  for="modal-1">BookMyGame</label><br/>
+     <label  for="modal-1">&nbsp;&nbsp;Arena</label><br/>
+<label  for="modal-3">&nbsp;&nbsp;Capacity</label>
+     <br/>
+    <label  for="modal-4"> &nbsp;&nbsp;Museum&Tour</label>
+    </span>
+  </figcaption>
+</figure>
+<h1 style="color:white;background:#DA020E;padding:5px;text-align:center">Be A Unitedian : Grab Merchandise from nearest Store</h1>
+
+<figure>
+  <img class="grayscale" src="manutdmer.jpg" height="100%" width="100%"/>
+  <figcaption>
+    <span><label  for="modal-1">BookMyGame</label><br/>
+     <label  for="modal-1">&nbsp;&nbsp;Arena</label><br/>
+<label  for="modal-3">&nbsp;&nbsp;Capacity</label>
+     <br/>
+    <label  for="modal-4"> &nbsp;&nbsp;Museum&Tour</label>
+    </span>
+  </figcaption>
+</figure>

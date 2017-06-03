@@ -1,0 +1,150 @@
+<html>
+
+<head>
+
+<title>History : Manchester United</title></head>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<style>
+html { 
+  background: url(historyback.jpg); 
+height:100%;
+}
+h2{
+color:white;
+}
+.oldtan{
+float:middle;
+}
+#main
+{
+opacity:0.9;
+background:transparent;
+padding:50px;
+border-radius:5px;
+}
+h1{
+color:white;
+}
+.blog {
+    height: 50%;
+    -webkit-transition: all 1s ease;
+    -moz-transition: all 1s ease;
+    -o-transition: all 1s ease;
+    -ms-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+.blog:hover {
+    cursor: pointer;
+    height:80%;
+}
+
+.mainimg{
+height:17%;
+width:10%;
+float: left;
+opacity:1.0;
+}
+body, input{
+	font-family: Calibri, Arial;
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	color: white;
+}
+a:visited {
+	color: white;
+}
+
+.comment {
+	width: 400px;
+	background-color:rgba(50, 54, 54, 0.5);
+	margin: 10px;
+padding:10px;
+font-size:20px;
+color:red;
+
+
+}
+a.morelink {
+	text-decoration:none;
+	outline: none;
+}
+.morecontent span {
+	display: none;
+
+}
+#glory{
+padding:25px;
+color:white;
+background-color:rgba(50, 54, 54, 0.5);
+width:30%;
+}
+</style>
+<SCRIPT>
+$(document).ready(function() {
+	var showChar = 100;
+	var ellipsestext = "...";
+	var moretext = "read more";
+	var lesstext = "shrink";
+	$('.more').each(function() {
+		var content = $(this).html();
+
+		if(content.length > showChar) {
+
+			var c = content.substr(0, showChar);
+			var h = content.substr(showChar-1, content.length - showChar);
+
+			var html = c + '<span class="moreelipses">'+ellipsestext+'</span>&nbsp;<span class="morecontent"><span>' + h + '</span>&nbsp;&nbsp;<a href="" class="morelink">'+moretext+'</a></span>';
+
+			$(this).html(html);
+		}
+
+	});
+
+	$(".morelink").click(function(){
+		if($(this).hasClass("less")) {
+			$(this).removeClass("less");
+			$(this).html(moretext);
+		} else {
+			$(this).addClass("less");
+			$(this).html(lesstext);
+		}
+		$(this).parent().prev().toggle();
+		$(this).prev().toggle();
+		return false;
+	});
+});
+</SCRIPT>
+<body link="white" vlink="white">
+<div id="main">
+<img class="mainimg" src="manutdlogo.svg" opacity="1"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<h1 style="float:middle;padding:100px;"> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GLORY OF MANCHESTER UNITED </h1>
+</div><br/>
+<img class="blog" src="utdhis.jpg" width="100%" height="50%"/>
+<a href="utdhis.jpg"><h2>Enlarge Image++</a></h2>
+
+<h2 style="color:#9acd32">GLORY</h2>
+
+<div id="glory"><h4 style="float:left">Founded in 1878 as Newton Heath L&YR Football Club, our club has operated for over 136 years. 
+The team first entered the English First Division, then the highest league in English football,
+ for the start of the 1892-93 season. Our club name changed to Manchester United Football Club in 1902, and we won the first of our 20 English League titles in 1908. In 1910, 
+we moved to Old Trafford, our current stadium.</h4></div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img class="oldtan" src="oldtrafford.png"/>
+
+<center><h2>Late 1940's</h2>
+<div class="comment more">
+	In the late 1940s, we returned to on-field success, winning the FA Cup in 1948 and finishing within the top four league positions during each of the first five seasons immediately following the Second World War. During the 1950s, we continued our on-field success under the leadership of manager Sir Matt Busby, who built a popular and famous team based on youth players known as the "Busby Babes."
+</div><h2>1958</h2>
+<div class="comment more">
+	In February 1958, an airplane crash resulted in the death of eight of our first team players. Global support and tributes followed this disaster as Busby galvanized the team around such popular players as George Best, Bobby Charlton and Denis Law. Rebuilding of the club culminated with a victory in the 1968 European Cup final, becoming the first English club to win this title.
+</div><h2>1986</h2>
+<div class="comment more">
+	In 1986, our club appointed Sir Alex Ferguson as manager. In 1990, we won the FA Cup and began a period of success that has continued until the present day. Since 1992, we have won the Premier League 13 times. In total, we have won a record 20 English League titles, a record 11 FA Cups, 4 League Cups, 3 European Champions Cups and 1 FIFA Club World Cup, making us one of the most successful clubs in England.
+</div><h2>2012-13</h2>
+<div class="comment more">At the end of the 2012/13 season, Sir Alex Ferguson retired as team manager. Sir Alex remains a key member of the club as he is a director of Manchester United FC. David Moyes was our manager during the 2013/14 season and departed the club in April 2014. Following this departure, Ryan Giggs assumed responsibility for the first team as interim manager.
+</div><h2>2014</h2>
+<div class="comment more">On 19 May 2014, we announced Louis van Gaal as the new team manager of Manchester United under a three-year contract. Louis van Gaal has managed at the top level of European football for over 20 years, and, in that time, he has won domestic titles and domestic cups in three countries, as well as the UEFA Champions League, the UEFA Cup, an Intercontinental Cup, two UEFA Super Cups and domestic Super Cups in Holland and Germany. Louis van Gaal took his new post in July 2014 after the FIFA World Cup, where he managed the Dutch national team into third place position.
+</div></center>
+</body>
+</html>

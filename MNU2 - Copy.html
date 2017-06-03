@@ -1,0 +1,916 @@
+<html>
+<head>
+<title>Manchester United</title>
+<script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+<link rel="shortcut icon" href="manutd.ico">
+<style>
+#news
+{
+float:right;
+}
+.grayscale{ 
+    filter: grayscale(0%);
+    -webkit-filter: grayscale(0%);
+    filter: none;
+}
+.grayscale:hover{ 
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    filter: gray; 
+        -webkit-transition: all 1.0s ease;
+	-moz-transition: all 1.0s ease;
+	-ms-transition: all 1.0s ease;
+	-o-transition: all 1.0s ease;
+	transition: all 1.0s ease;
+}
+#sponsers
+{
+ display: inline-block;
+height:20%;
+}
+table,th,td,td{text-align:left;
+font-size:25px;
+}
+#footer
+{
+background-color:#1C1C1C;
+padding:10px;
+height:40%;
+width:100%;
+font-color:white;
+font-size:9px;
+}
+#trending
+{
+margin-top:19%;
+color:#000;
+font-size:17px;
+margin-left:90%;
+}
+#slider
+{
+margin-top:14%;
+}
+#score
+{
+BACKGROUND:#DA020E;
+padding:10px;
+width:100%;
+color:white;
+}
+
+header.smaller nav a {
+	line-height: 75%;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+a {
+	text-decoration: none;
+	color: #fcfcfc;
+	font-weight: 300;
+}
+
+a:hover {
+	color: #3c3c3c;
+}
+
+#wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+
+
+header {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+ background-image: url("manu.jpg");
+background-size: 100% 100%;	
+/*background-color: #DA020E;
+	*/-webkit-transition: height 0.5s;
+	-moz-transition: height 0.5s;
+	-ms-transition: height 0.5s;
+	-o-transition: height 0.5s;
+	transition: height 0.5s;
+}
+header.smaller {
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+background-image: url("mauu.jpg");
+background-size: 100% 100%;	
+background-color: #DA020E;
+	-webkit-transition: height 0.5s;
+	-moz-transition: height 0.5s;
+	-ms-transition: height 0.5s;
+	-o-transition: height 0.5s;
+	transition: height 0.5s;
+border-bottom: thick solid #A30909;
+}
+header img#logo {
+	display: inline-block;	
+   margin: 0;
+   padding:0;
+opacity:0.1;
+  /* background-color:#DA020E;
+*/	float:LEFT;
+	height: 0%;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+header.smaller img#logo {
+	display: inline-block;	
+   margin: 0;
+   padding:0;
+opacity:0.1;
+  /* background-color:#DA020E;
+*/	float:LEFT;
+	height: 100%;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+header nav {
+	display: inline-block;
+	float: right;
+}
+
+header nav a {
+	line-height: 210PX;
+	margin-left: 30px;
+	color: #fcfcfc;
+	font-weight: 300;
+	font-size: 1.1em;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+header nav a:hover {
+	color: #fd5559;
+}
+
+header.smaller {
+	height: 20%;
+}
+
+header.smaller img#logo {
+	height: 100%;
+opacity:1;
+}
+
+header.smaller nav a {
+	line-height: 88px;
+}
+
+
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+}
+
+@media all and (max-width: 760px) {
+	header IMG#logo {
+		display: block;
+		float: none;
+		margin: 0 auto;
+		height: 100px;     
+		line-height: 80px;
+		FLOAT:LEFT;
+	}
+
+	header nav {
+		display: block;
+		float: none;
+		height: 50px;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	header nav a {
+		line-height: 50px;
+		margin: 0 10px;
+	}
+
+	header.smaller {
+		height: 75px;
+	}
+
+	header.smaller IMG#logo {
+		height: 40px;
+		line-height: 40px;
+		font-size: 30px;
+     width:100%;
+	}
+
+	header.smaller nav {
+		height: 85px;
+
+	}
+
+	header.smaller nav a {
+		line-height: 35px;
+	}
+@media all and (max-width: 600px) {
+	.container {
+		width: 100%;
+	}
+
+	
+}
+</style>
+<script>
+function init() {
+  window.addEventListener('scroll', function(e){
+    var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+        shrinkOn = 20,
+        header = document.querySelector("header");
+    if (distanceY > shrinkOn) {
+      header.setAttribute("class","smaller");
+    } else {
+        header.removeAttribute("class");
+    }
+  });
+}
+window.onload = init();
+</script>
+
+</head>
+<body >
+
+  <header>
+      <div class="container clearfix">
+          <img  id="logo" src="manutdlogo.svg"/>
+  <nav>
+              <a href="#bacon">Arena</a>
+              <a href="#sausage">MemberShip</a>
+              <a href="#biltong">Tickets</a>
+ <a href="#biltong">FanZone</a> <a href="#biltong">History</a> <a href="manutdsch.jpg">Fixture</a> <a href="https://en.wikipedia.org/wiki/List_of_Manchester_United_F.C._seasons">Season</a></nav>
+      </div>
+  </header>
+
+<div id="slider">
+ <!-- it works the same with all jquery version from 1.x to 2.x -->
+    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+    <!-- use jssor.slider.mini.js (40KB) instead for release -->
+    <!-- jssor.slider.mini.js = (jssor.js + jssor.slider.js) -->
+    <script type="text/javascript" src="js/jssor.js"></script>
+    <script type="text/javascript" src="js/jssor.slider.js"></script>
+    <script>
+
+        jQuery(document).ready(function ($) {
+            var options = {
+                $AutoPlay: true,                                    //[Optional] Whether to auto play, to enable slideshow, this option must be set to true, default value is false
+                $AutoPlaySteps: 1,                                  //[Optional] Steps to go for each navigation request (this options applys only when slideshow disabled), the default value is 1
+                $AutoPlayInterval: 4000,                            //[Optional] Interval (in milliseconds) to go for next slide since the previous stopped if the slider is auto playing, default value is 3000
+                $PauseOnHover: 1,                               //[Optional] Whether to pause when mouse over if a slider is auto playing, 0 no pause, 1 pause for desktop, 2 pause for touch device, 3 pause for desktop and touch device, 4 freeze for desktop, 8 freeze for touch device, 12 freeze for desktop and touch device, default value is 1
+                $Loop: 0,                                       //[Optional] Enable loop(circular) of carousel or not, 0: stop, 1: loop, 2 rewind, default value is 1
+
+                $ArrowKeyNavigation: true,   			            //[Optional] Allows keyboard (arrow key) navigation or not, default value is false
+                $SlideDuration: 500,                                //[Optional] Specifies default duration (swipe) for slide in milliseconds, default value is 500
+                $MinDragOffsetToSlide: 20,                          //[Optional] Minimum drag offset to trigger slide , default value is 20
+                //$SlideWidth: 600,                                 //[Optional] Width of every slide in pixels, default value is width of 'slides' container
+                //$SlideHeight: 300,                                //[Optional] Height of every slide in pixels, default value is height of 'slides' container
+                $SlideSpacing: 5, 					                //[Optional] Space between each slide in pixels, default value is 0
+                $DisplayPieces: 1,                                  //[Optional] Number of pieces to display (the slideshow would be disabled if the value is set to greater than 1), the default value is 1
+                $ParkingPosition: 0,                                //[Optional] The offset position to park slide (this options applys only when slideshow disabled), default value is 0.
+                $UISearchMode: 1,                                   //[Optional] The way (0 parellel, 1 recursive, default value is 1) to search UI components (slides container, loading screen, navigator container, arrow navigator container, thumbnail navigator container etc).
+                $PlayOrientation: 1,                                //[Optional] Orientation to play slide (for auto play, navigation), 1 horizental, 2 vertical, 5 horizental reverse, 6 vertical reverse, default value is 1
+                $DragOrientation: 3,                                //[Optional] Orientation to drag slide, 0 no drag, 1 horizental, 2 vertical, 3 either, default value is 1 (Note that the $DragOrientation should be the same as $PlayOrientation when $DisplayPieces is greater than 1, or parking position is not 0)
+
+                $ThumbnailNavigatorOptions: {
+                    $Class: $JssorThumbnailNavigator$,              //[Required] Class to create thumbnail navigator instance
+                    $ChanceToShow: 2,                               //[Required] 0 Never, 1 Mouse Over, 2 Always
+
+                    $Loop: 2,                                       //[Optional] Enable loop(circular) of carousel or not, 0: stop, 1: loop, 2 rewind, default value is 1
+                    $AutoCenter: 3,                                 //[Optional] Auto center thumbnail items in the thumbnail navigator container, 0 None, 1 Horizontal, 2 Vertical, 3 Both, default value is 3
+                    $Lanes: 1,                                      //[Optional] Specify lanes to arrange thumbnails, default value is 1
+                    $SpacingX: 4,                                   //[Optional] Horizontal space between each thumbnail in pixel, default value is 0
+                    $SpacingY: 4,                                   //[Optional] Vertical space between each thumbnail in pixel, default value is 0
+                    $DisplayPieces: 4,                              //[Optional] Number of pieces to display, default value is 1
+                    $ParkingPosition: 0,                            //[Optional] The offset position to park thumbnail
+                    $Orientation: 2,                                //[Optional] Orientation to arrange thumbnails, 1 horizental, 2 vertical, default value is 1
+                    $DisableDrag: false                             //[Optional] Disable drag or not, default value is false
+                }
+            };
+
+            var jssor_slider1 = new $JssorSlider$("slider1_container", options);
+
+            //responsive code begin
+            //you can remove responsive code if you don't want the slider scales while window resizes
+            function ScaleSlider() {
+                var parentWidth = jssor_slider1.$Elmt.parentNode.clientWidth;
+                if (parentWidth) {
+                    var sliderWidth = parentWidth;
+
+                    //keep the slider width no more than 810
+                    sliderWidth = Math.min(sliderWidth, 810);
+
+                    jssor_slider1.$ScaleWidth(sliderWidth);
+                }
+                else
+                    window.setTimeout(ScaleSlider, 30);
+            }
+            ScaleSlider();
+
+            $(window).bind("load", ScaleSlider);
+            $(window).bind("resize", ScaleSlider);
+            $(window).bind("orientationchange", ScaleSlider);
+            //responsive code end
+        });
+    </script>
+    <!-- Jssor Slider Begin -->
+    <!-- To move inline styles to css file/block, please specify a class name for each element. --> 
+    <div id="slider1_container" style="position: relative; top: 0px; left: 0px; width: 810px; height: 300px; background: #000; overflow: hidden; ">
+
+        <!-- Loading Screen -->
+        <div u="loading" style="position: absolute; top: 0px; left: 0px;">
+            <div style="filter: alpha(opacity=70); opacity:0.7; position: absolute; display: block;
+                background-color: #000000; top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+            <div style="position: absolute; display: block; background: url(../img/loading.gif) no-repeat center center;
+                top: 0px; left: 0px;width: 100%;height:100%;">
+            </div>
+        </div>
+
+        <!-- Slides Container -->
+        <div u="slides" style="cursor: move; position: absolute; left: 0px; top: 0px; width: 600px; height: 300px;
+            overflow: hidden;">
+            <div>
+                <img u="image" src="mus1.jpg" />
+                <div u="thumb">
+                    <img class="i" src="mus1.jpg" /><div class="t">Manchester United vs Tottenham Hotspur</div>
+                    <div class="c"></div>
+                </div>
+            </div>
+            <div>
+                <img u="image" src="mus2.jpg" />
+                <div u="thumb">
+                    <img class="i" src="mus2.jpg" /><div class="t">Harry Kane is no one-season wonder</div>
+                    <div class="c">
+</div>
+                </div>
+            </div>
+            <div>
+                <img u="image" src="mus3.jpg" />
+                <div u="thumb">
+                    <img class="i" src="mus3.jpg" /><div class="t">Mata deserves place in Van Gaal's Galacticos
+</div>
+                    <div class="c"></div>
+                </div>
+            </div>
+            <div>
+                <img u="image" src="mus4.jpg" />
+                <div u="thumb">
+                    <img class="i" src="mus4.jpg" /><div class="t">Rooney (and Kane) needs support</div>
+                    <div class="c"></div>
+                </div>
+            </div>
+            <div>
+                <img u="image" src="mus5.jpg" />
+                <div u="thumb">
+                    <img class="i" src="mus5.jpg" /><div class="t">United really need to sort out  DeGea</div>
+                    <div class="c"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!--#region ThumbnailNavigator Skin Begin -->
+        <style>
+            /* jssor slider thumbnail navigator skin 11 css */
+            /*
+                .jssort11 .p            (normal)
+                .jssort11 .p:hover      (normal mouseover)
+                .jssort11 .pav          (active)
+                .jssort11 .pav:hover    (active mouseover)
+                .jssort11 .pdn          (mousedown)
+                */
+            .jssort11 {
+                position: absolute;
+                width: 200px;
+                height: 300px;
+                font-family: Arial, Helvetica, sans-serif;
+                -moz-user-select: none;
+                -webkit-user-select: none;
+                -ms-user-select: none;
+                user-select: none;
+            }
+
+                .jssort11 .p {
+                    position: absolute;
+                    width: 200px;
+                    height: 69px;
+                    background: #000;
+                /*#181818*/}
+
+                .jssort11 .tp {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    border: none;
+                }
+
+                .jssort11 .i, .jssort11 .pav:hover .i {
+                    position: absolute;
+                    top: 3px;
+                    left: 3px;
+                    width: 60px;
+                    height: 30px;
+                    border: white 1px ;
+                }
+
+                * html .jssort11 .i {
+                    width /**/: 62px;
+                    height /**/: 32px;
+                }
+
+                .jssort11 .pav .i {
+                    border: white 1px solid;
+                }
+
+                .jssort11 .t, .jssort11 .pav:hover .t {
+                    position: absolute;
+                    top: 3px;
+                    left: 68px;
+                    width: 129px;
+                    height: 32px;
+                    line-height: 32px;
+                    text-align: center;
+                    color:#DA020E ;
+                    font-size: 13px;
+                    font-weight: 700;
+                }
+
+                .jssort11 .pav .t, .jssort11 .p:hover .t {
+                    color:#DA020E;
+                }
+
+                .jssort11 .c, .jssort11 .pav:hover .c {
+                    position: absolute;
+                    top: 38px;
+                    left: 3px;
+                    width: 197px;
+                    height: 31px;
+                    line-height: 31px;
+                    color: #e6e6e6;
+                    font-size: 11px;
+                    font-weight: 400;
+                    overflow: hidden;
+                }
+
+                .jssort11 .pav .c, .jssort11 .p:hover .c {
+                    color:#e6e6e6;
+                }
+
+                .jssort11 .t, .jssort11 .c {
+                    transition: color 2s;
+                    -moz-transition: color 2s;
+                    -webkit-transition: color 2s;
+                    -o-transition: color 2s;
+                }
+
+                .jssort11 .p:hover .t, .jssort11 .pav:hover .t, .jssort11 .p:hover .c, .jssort11 .pav:hover .c {
+                    transition: none;
+                    -moz-transition: none;
+                    -webkit-transition: none;
+                    -o-transition: none;
+                }
+
+                .jssort11 .p:hover, .jssort11 .pav:hover {
+                    background: #e6e6e6;
+                }
+
+                .jssort11 .pav, .jssort11 .p.pdn {
+                    background: #151515;
+                }
+        </style>
+        <div u="thumbnavigator" class="jssort11" style="left: 605px; top:0px;">
+            <!-- Thumbnail Item Skin Begin -->
+            <div u="slides" style="cursor: default;">
+                <div u="prototype" class="p" style="top: 0; left: 0;">
+                    <div u="thumbnailtemplate" class="tp"></div>
+                </div>
+            </div>
+            <!-- Thumbnail Item Skin End -->
+        </div>
+    </div>
+    <!-- Jssor Slider End -->
+</div>
+
+
+
+
+<div id="score">
+<h1>Manchester United F.C.</h1>
+<p>6th in English Premier League</p>
+<p>Old Trafford</p>
+<h1>Man United
+&nbsp;&nbsp;&nbsp;1 - 0&nbsp;&nbsp;&nbsp;
+Tottenham
+</h1></div>
+
+
+<table style="width:100%">
+  <tr>
+    <td width="50%"><h3 style="color:white;background:#DA020E;padding:3px;text-align:left">NEWS AND FEATURES</h3></td>
+    <td width="50%"><h3 style="color:white;background:#DA020E;padding:3px;text-align:left">Get United With Us</h3></td>		
+  </tr>
+<tr>
+<td><h3 style="background-color:#e6e6e6;padding:17px"><img src="uniedvilla.ashx" width="20%" height="5%" border="1px"/>Villa 0 -Utd 1</h3></td>
+<td>
+<ul class="social-icons">
+  <li class="icon icon--facebook">
+    <a href="#">
+      <span class="icon__name">Facebook</span>
+    </a>
+  </li>
+  <li class="icon icon--twitter">
+    <a href="#">
+      <span class="icon__name">Twitter</span>
+    </a>
+  </li>
+  <li class="icon icon--linkedin">
+    <a href="#">
+      <span class="icon__name">LinkedIn</span>
+    </a>
+  </li>
+  <li class="icon icon--instagram">
+    <a href="#">
+      <span class="icon__name">Instagram</span>
+    </a>
+  </li>
+  <li class="icon icon--flickr">
+    <a href="#">
+      <span class="icon__name">Flickr</span>
+    </a>
+  </li>
+</ul>
+</td></tr>
+</table>
+
+
+
+<style>
+.social-icons {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.icon {
+  float: left;
+  position: relative;
+  width: 19%;
+  height: 0;
+  margin: 1% 0.5%;
+  padding-bottom: 19%;
+}
+@media all and (min-width: 640px) {
+  .icon {
+    width: 15%;
+    padding-bottom: 15%;
+  }
+}
+.icon:last-of-type {
+  margin-right: 0;
+}
+.icon a {
+  display: block;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  border-radius: 10px;
+  background-color: #fff;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-transition: all .2s ease-out;
+          transition: all .2s ease-out;
+}
+.icon a:hover {
+  background-color: #222;
+  background-size: 0%;
+  -webkit-transition: all .2s ease-out;
+          transition: all .2s ease-out;
+}
+
+.icon__name {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  margin-top: -7px;
+  color: #fff;
+  font-size: 14px;
+  text-align: center;
+  -webkit-transition: all .3s ease-out;
+          transition: all .3s ease-out;
+  opacity: 0;
+  -webkit-filter: blur(25px);
+          filter: blur(25px);
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+.icon:hover .icon__name {
+  -webkit-transition: all .3s ease-out;
+          transition: all .3s ease-out;
+  opacity: 1;
+  -webkit-filter: blur(0);
+          filter: blur(0);
+}
+
+.icon--facebook a {
+  background-color: #3b5998;
+  background-image: url("http://benhodgson.net/codepen/social/facebook-128.png");
+}
+
+.icon--twitter a {
+  background-color: #00aced;
+  background-image: url("http://benhodgson.net/codepen/social/twitter-128.png");
+}
+
+.icon--linkedin a {
+  background-color: #007fb1;
+  background-image: url("http://benhodgson.net/codepen/social/linkedin-128.png");
+}
+
+.icon--instagram a {
+  background-color: #5c3d2e;
+  background-image: url("http://benhodgson.net/codepen/social/instagram-128.png");
+}
+
+.icon--flickr a {
+  background-color: #c9317d;
+  background-image: url("http://benhodgson.net/codepen/social/flickr-128.png");
+}
+</style>
+
+<h1 style="color:white;background:#DA020E;padding:5px;text-align:center">Arena</h1>
+
+<style>
+ figure { 
+  position: relative;
+}
+
+figcaption {
+  position: absolute;
+  bottom: 10%;
+  width: 501px; 
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  line-height: 200%;
+  text-transform: capitalize;
+  }
+  span {
+    color: red;
+    background: rgba(0, 0, 0, 0.7);
+    padding: .5em;
+}
+.modal {
+
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: left;
+  background: rgba(0,0,0, 0.7);
+  transition: opacity .25s ease;
+}
+
+.modal__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  cursor: pointer;
+}
+
+.modal-state {
+  display: none;
+}
+
+.modal-state:checked + .modal {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-state:checked + .modal .modal__inner {
+  top: 0;
+}
+
+.modal__inner {
+  transition: top .25s ease;
+  position: absolute;
+  top: -20%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 50%;
+  margin: auto;
+  overflow: auto;
+  background: #fff;
+  border-radius: 5px;
+  padding: 1em 2em;
+  height: 50%;
+}
+
+.modal__close {
+  position: absolute;
+  right: 1em;
+  top: 1em;
+  width: 1.1em;
+  height: 1.1em;
+  cursor: pointer;
+}
+
+.modal__close:after,
+.modal__close:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 1.5em;
+  background: #ccc;
+  display: block;
+  transform: rotate(45deg);
+  left: 50%;
+  margin: -3px 0 0 -1px;
+  top: 0;
+}
+
+.modal__close:hover:after,
+.modal__close:hover:before {
+  background: #aaa;
+}
+
+.modal__close:before {
+  transform: rotate(-45deg);
+}
+
+@media screen and (max-width: 768px) {
+	
+  .modal__inner {
+    width: 90%;
+    height: 90%;
+    box-sizing: border-box;
+  }
+}
+
+p img {
+  max-width: 200px;
+  height: auto;
+  float: left;
+  margin: 0 1em 1em 0;
+}
+</style>
+
+
+<figure>
+  <img class="grayscale" src="old.jpg" height="100%" width="100%"/>
+  <figcaption>
+    <span><label  for="modal-1">BookMyGame</label><br/>
+     <label  for="modal-1">&nbsp;&nbsp;Arena</label><br/>
+<label  for="modal-3">&nbsp;&nbsp;Capacity</label>
+     <br/>
+    <label  for="modal-4"> &nbsp;&nbsp;Museum&Tour</label>
+    </span>
+  </figcaption>
+</figure>
+
+<center>
+<input class="modal-state" id="modal-1" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-1"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-1"></label>
+    <h2>Old Traford : The Theatre of Dreams</h2>
+    <p>Old Trafford is a football stadium in Old Trafford, Greater Manchester, England, and the home of Manchester United. With a capacity of 75,635, it is the third-largest stadium and the second-largest football stadium in the United Kingdom, and the eleventh-largest in Europe. It is about 0.5 miles (800 m) from Old Trafford Cricket Ground and the adjacent tram station.</p>
+  </div>
+</div></center>	
+
+<center>
+<input class="modal-state" id="modal-4" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-4"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-4"></label>
+    <h2>Old Traford : Museum & Tour</h2>
+    <img src="mus&tour.ashx"/>
+  </div>
+</div></center>	
+
+<center>
+<input class="modal-state" id="modal-3" type="checkbox" />
+<div class="modal">
+  <label class="modal__bg" for="modal-3"></label>
+  <div class="modal__inner">
+    <label class="modal__close" for="modal-3"></label>
+    <h2>Old Traford : Capcity</h2>
+    <p>Capcity : 75,635</p>
+  </div>
+</div></center>	
+
+<h1 style="color:white;background:#DA020E;padding:5px;text-align:center">FanZone</h1>
+<figure>
+  <img class="grayscale" src="manutdfan.jpg" height="100%" width="100%"/>
+  <figcaption>
+    <span><label  for="modal-1">BookMyGame</label><br/>
+     <label  for="modal-1">&nbsp;&nbsp;Arena</label><br/>
+<label  for="modal-3">&nbsp;&nbsp;Capacity</label>
+     <br/>
+    <label  for="modal-4"> &nbsp;&nbsp;Museum&Tour</label>
+    </span>
+  </figcaption>
+</figure>
+
+
+<h1 style="color:white;background:#DA020E;padding:5px;text-align:center">Be A unitedian : Grab Merchandise from nearest Store</h1>
+
+<figure>
+  <img class="grayscale" src="manutdmer.jpg" height="100%" width="100%"/>
+  <figcaption>
+    <span><label  for="modal-1">BookMyGame</label><br/>
+     <label  for="modal-1">&nbsp;&nbsp;Arena</label><br/>
+<label  for="modal-3">&nbsp;&nbsp;Capacity</label>
+     <br/>
+    <label  for="modal-4"> &nbsp;&nbsp;Museum&Tour</label>
+    </span>
+  </figcaption>
+</figure>
+
+
+<h1 style="color:white;background:#DA020E;padding:5px;text-align:center">OFFICIAL SPONSORS</h1>
+<center><div id="sponsers"></br><img src="cher.ashx"height="90" width="115"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="adidas.ashx"height="90" width="115"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="aon.ashx" height="90" width="115"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="premierl.ashx" height="90" width="115"/></div></center>
+
+
+
+<div id="footer">
+</br>
+<center><img src="manutdlogo.svg" height="30%" width="90"/></center><br/><br/>
+<table style="color:white;width:100%">
+<tr>
+    <td>News</td>
+    <td>Foundation</td>		
+    <td>History</td>
+  </tr>
+  <tr>
+    <td>The Club</td>
+    <td>Sponsors</td>		
+    <td>Fans</td>
+  </tr>
+  <tr>
+    <td>Events</td>
+    <td>Squad</td>		
+    <td>Trainning</td>
+  </tr>
+</table><br></br>
+<p style="float:right;color:#e6e6e6;font:size:9px">Copyright, Manchester United Ltd, 2015 Photography provided by Manchester United Ltd</p>
+</div>
+	
+
+
+</body>
+</html>

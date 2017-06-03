@@ -1,0 +1,201 @@
+<html>
+<head>
+<style>
+header.smaller {
+	height: 25%;
+}
+header.smaller nav a {
+	line-height: 75%;
+}
+
+*,
+*:before,
+*:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+
+a {
+	text-decoration: none;
+	color: #fcfcfc;
+	font-weight: 300;
+}
+
+a:hover {
+	color: #3c3c3c;
+}
+
+#wrapper {
+	width: 100%;
+	margin: 0 auto;
+}
+
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+	padding: 0 30px;
+}
+
+
+
+header {
+	width: 100%;
+	height: 30%;
+	overflow: hidden;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 1;
+ background-image: url("u.jpg");
+	/*background-color: #DA020E;
+	*/-webkit-transition: height 0.5s;
+	-moz-transition: height 0.5s;
+	-ms-transition: height 0.5s;
+	-o-transition: height 0.5s;
+	transition: height 0.5s;
+}
+
+header img#logo {
+	display: inline-block;	
+   margin: 0;
+   padding:0;
+  /* background-color:#DA020E;
+*/	float:LEFT;
+	height: 100%;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+header nav {
+	display: inline-block;
+	float: right;
+}
+
+header nav a {
+	line-height: 10PX;
+	margin-left: 20px;
+	color: #fcfcfc;
+	font-weight: 300;
+	font-size: 1em;
+	-webkit-transition: all 0.5s;
+	-moz-transition: all 0.5s;
+	-ms-transition: all 0.5s;
+	-o-transition: all 0.5s;
+	transition: all 0.5s;
+}
+
+header nav a:hover {
+	color: #fd5559;
+}
+
+header.smaller {
+	height: 20%;
+}
+
+header.smaller img#logo {
+	height: 100%;
+}
+
+header.smaller nav a {
+	line-height: 88px;
+}
+
+
+
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	content: "";
+	clear: both;
+	height: 0;
+}
+
+@media all and (max-width: 760px) {
+	header IMG#logo {
+		display: block;
+		float: none;
+		margin: 0 auto;
+		height: 100px;     
+		line-height: 80px;
+		FLOAT:LEFT;
+	}
+
+	header nav {
+		display: block;
+		float: none;
+		height: 50px;
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	header nav a {
+		line-height: 50px;
+		margin: 0 10px;
+	}
+
+	header.smaller {
+		height: 75px;
+	}
+
+	header.smaller IMG#logo {
+		height: 40px;
+		line-height: 40px;
+		font-size: 30px;
+     width:100%;
+	}
+
+	header.smaller nav {
+		height: 85px;
+
+	}
+
+	header.smaller nav a {
+		line-height: 35px;
+	}
+@media all and (max-width: 600px) {
+	.container {
+		width: 100%;
+	}
+
+	
+}
+
+
+</style>
+<script>
+function init() {
+  window.addEventListener('scroll', function(e){
+    var distanceY = window.pageYOffset || document.documentElement.scrollTop,
+        shrinkOn = 200,
+        header = document.querySelector("header");
+    if (distanceY > shrinkOn) {
+      header.setAttribute("class","smaller");
+    } else {
+        header.removeAttribute("class");
+    }
+  });
+}
+window.onload = init();
+</script>
+</head>
+<body>
+
+  <header>
+      <div class="container clearfix">
+          <img id="logo" src="manutdlogo.svg"/>
+       <strong>   <nav>
+              <a href="#bacon">Home</a>
+              <a href="#sausage">Sausage</a>
+              <a href="#biltong">Biltong</a>
+ <a href="#biltong">Biltong</a> <a href="#biltong">Biltong</a> <a href="#biltong">Biltong</a> <a href="#biltong">Biltong</a>      </nav></strong>
+      </div>
+  </header>
+<p>dg</p>
+<p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p><p>dg</p></body>
+</html>
